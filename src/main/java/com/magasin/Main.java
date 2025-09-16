@@ -1,4 +1,6 @@
 package com.magasin;
+import  com.magasin.Magasin;
+import   com.magasin.Item;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,8 +20,6 @@ public class Main {
                 new Item("Pass VIP Concert", 15,20),
                 new Item("Pass VIP Concert", 11,49),
                 new Item("Pass VIP Concert", 10,49),
-                new Item("Pass VIP Concert", 6,48),
-                new Item("Pass VIP Concert", 5,48),
                 new Item("Pass VIP Concert", 0,20),
 
                 // Kryptonite
@@ -31,7 +31,7 @@ public class Main {
 
         Magasin magasin = new Magasin(items);
 
-        int days = 12;
+        int days = 5;
         for (int day = 0; day < days; day++) {
             System.out.println("----- jour " + day + "-----");
 
