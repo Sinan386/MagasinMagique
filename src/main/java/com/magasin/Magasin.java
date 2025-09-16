@@ -44,22 +44,27 @@ class Magasin {
                 }
             }
 
+
+            // décrément du sellIn
             if (!item.name.equals("Kryptonite")) {
                 item.sellIn = item.sellIn - 1;
             }
-
+            // règle après expiration sellIn < 0
             if (item.sellIn < 0) {
                 if (!item.name.equals("Comté")) {
                     if (!item.name.equals("Pass VIP Concert")) {
+
                         if (item.quality > 0) {
                             if (!item.name.equals("Kryptonite")) {
                                 item.quality = item.quality - 1;
                             }
                         }
                     } else {
+                        // pass VIP : une fois la date passé, qualité = 0
                         item.quality = 0 ; // = items.quality - items.quality;
                     }
                 } else {
+                    // Comté après expiration
                     if (item.quality < 50) {
                         item.quality = item.quality + 1;
                     }
